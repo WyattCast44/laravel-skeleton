@@ -2,7 +2,7 @@
     
     <div class="mx-4 sm:mx-auto max-w-xl my-10">
 
-        <a href="{{ route('welcome') }}">
+        <a href="{{ route('dashboard') }}">
             <h1 class="pb-2.5 mb-2.5 text-2xl font-semibold border-b border-gray-300">
                 <x-blade.yield name="page::title" />
             </h1>

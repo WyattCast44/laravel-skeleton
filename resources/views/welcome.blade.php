@@ -12,10 +12,11 @@
             
             <x-blade.guest>
                 <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('login') }}">Register</a>
+                <a href="{{ route('register') }}">Register</a>
             </x-blade.guest>
-
+            
             <x-blade.auth>
+                <a href="{{ route('dashboard') }}">Dashboard</a>
                 <form action="{{ route('logout') }}" method="post">
                     <x-blade.csrf />
                     <button class="link">Logout</button>
@@ -24,7 +25,7 @@
 
         </nav>
 
-        <div class="mt-10">
+        <div class="mt-5">
 
             Welcome to Wyatt's Laravel Skeleton, happy crafting ⚒
 
