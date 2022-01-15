@@ -1,10 +1,12 @@
-<x-blade.extends name="layouts.base" section="body">
+<x-blade.extends name="layouts.app" section="content">
     
+    <x-blade.section name="page::title" content="Dashboard" />
+
     <div class="mx-4 sm:mx-auto max-w-xl my-10">
 
         <a href="{{ route('welcome') }}">
             <h1 class="pb-2.5 mb-2.5 text-2xl font-semibold border-b border-gray-300">
-                <x-blade.yield name="page::title" />
+                Dashboard
             </h1>
         </a>
 

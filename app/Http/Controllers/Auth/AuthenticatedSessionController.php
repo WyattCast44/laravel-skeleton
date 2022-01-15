@@ -11,7 +11,12 @@ class AuthenticatedSessionController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth'])->only('delete');
+        $this->middleware(['auth'])->only('destroy');
+    }
+
+    public function create(Request $request)
+    {
+        return redirect()->route('dashboard');
     }
     
     public function destroy(): RedirectResponse

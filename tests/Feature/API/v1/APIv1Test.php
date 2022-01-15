@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\API\v1;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
