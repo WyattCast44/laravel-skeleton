@@ -2,11 +2,11 @@
     
     <div class="mx-4 sm:mx-auto max-w-xl my-10">
 
-        <a href="{{ route('welcome') }}">
-            <h1 class="pb-2.5 mb-2.5 text-2xl font-semibold border-b border-gray-300">
+        <h1 class="pb-2.5 mb-2.5 text-2xl font-semibold border-b border-gray-300">
+            <a href="{{ route('welcome') }}">
                 {{ config('app.name') }}
-            </h1>
-        </a>
+            </a>
+        </h1>
 
         <nav class="flex items-center space-x-4 border-b pb-2.5 border-gray-300">
             

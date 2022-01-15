@@ -11,19 +11,19 @@
 
         <div>
             <x-inputs.label for="name">Name</x-inputs.label>
-            <x-inputs.text type="text" name="name" id="name" wire:model.lazy="name" />
+            <x-inputs.text type="text" name="name" id="name" required wire:model.lazy="name" autofocus />
             <x-validation.error-inline name="name" />
         </div>
 
         <div>
             <x-inputs.label for="email">Email</x-inputs.label>
-            <x-inputs.text type="email" name="email" id="email" wire:model.lazy="email" />
+            <x-inputs.text type="email" name="email" id="email" required wire:model.lazy="email" />
             <x-validation.error-inline name="email" />
         </div>
         
         <div>
             <x-inputs.label for="password">Password</x-inputs.label>
-            <x-input-groups.password name="password" id="password" wire:model.lazy="password" />
+            <x-input-groups.password name="password" id="password" required wire:model.lazy="password" />
             <x-validation.error-inline name="password" />
         </div>
 

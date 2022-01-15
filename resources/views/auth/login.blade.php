@@ -34,6 +34,10 @@
         <div class="flex items-center space-x-2.5">
             <button type="submit" class="link">Login</button>
         </div>
+
+        <div>
+            <a href="{{ route('password.email') }}">Forgot your password?</a>
+        </div>
     
     </form>
     
