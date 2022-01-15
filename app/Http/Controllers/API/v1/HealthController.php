@@ -14,6 +14,7 @@ class HealthController extends Controller
             'healthy' => true,
             'timestamp' => now(),
             'authenticated' => $request->user() ? true : false,
+            'extra' => [],
         ]);
     }
 }

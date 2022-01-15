@@ -38,6 +38,12 @@ yarn install
 yarn dev
 ```
 
+## Suggested Deployments Steps
+
+```bash
+php artisan icons:cache
+```
+
 ## Packages installed by default
 
 ### Frontend
@@ -60,7 +66,7 @@ yarn dev
 - Laravel Telescope
 - Laravel Debugbar
 - Laravel Sanctum
-- Blade UI Kit - Icons
+- [Blade UI Kit - Icons](https://github.com/blade-ui-kit/blade-icons)
 
 ## Summary of Changes
 

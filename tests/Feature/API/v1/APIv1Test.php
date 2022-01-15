@@ -18,6 +18,7 @@ class APIv1Test extends TestCase
                 'healthy',
                 'timestamp',
                 'authenticated',
+                'extra',
             ]);
     }
 }
