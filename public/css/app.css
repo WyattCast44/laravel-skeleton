@@ -602,6 +602,18 @@ select {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.my-0\.5 {
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .mb-2\.5 {
   margin-bottom: 0.625rem;
 }
@@ -610,6 +622,15 @@ select {
 }
 .mt-10 {
   margin-top: 2.5rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.inline {
+  display: inline;
 }
 .flex {
   display: flex;
@@ -638,6 +659,16 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-x-2\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.625rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.625rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .rounded-sm {
   border-radius: 0.125rem;
@@ -686,12 +717,24 @@ select {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .font-semibold {
   font-weight: 600;
 }
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 a {
@@ -720,6 +763,22 @@ a:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
+.selection\:bg-red-200 *::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+.selection\:bg-red-200 *::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+.selection\:bg-red-100 *::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+.selection\:bg-red-100 *::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
 .selection\:bg-slate-300::-moz-selection {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
@@ -727,6 +786,22 @@ a:hover {
 .selection\:bg-slate-300::selection {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+.selection\:bg-red-200::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+.selection\:bg-red-200::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+.selection\:bg-red-100::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+.selection\:bg-red-100::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;

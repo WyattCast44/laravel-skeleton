@@ -1,6 +1,6 @@
 <div class="flex items-center" x-data="{ type: 'password'}">
 
-    <x-inputs.text {{ $attributes->merge(['class' => 'border-r-0 rounded-r-none', 'x-ref' => 'input']) }} x-bind:type="type"  />
+    <x-inputs.text {{ $attributes->merge(['class' => 'border-r-0 rounded-r-none']) }} x-bind:type="type"  />
     
     <button 
         type="button" 

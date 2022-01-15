@@ -1,3 +1,11 @@
+<x-blade.push name="head::styles">
+    <livewire:styles />
+</x-blade.push>
+
+<x-blade.push name="head::scripts">
+    <livewire:scripts />
+</x-blade.push>
+
 <x-blade.extends name="layouts.base" section="body">
     
     <div class="mx-4 sm:mx-auto max-w-xl my-10">
@@ -13,7 +21,7 @@
             <a href="{{ route('register') }}">Register</a>
         </nav>
 
-        <div class="mt-10">
+        <div class="mt-5">
             <x-blade.yield name="content" />
         </div>
         

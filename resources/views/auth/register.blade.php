@@ -5,6 +5,8 @@
 
 <x-blade.extends name="layouts.auth" section="content">
 
+    <h2 class="mb-5 text-2xl font-semibold">Register</h2>
+
     <form class="space-y-4">
 
         <div>

@@ -17,7 +17,7 @@
     
         </nav>
 
-        <div class="mt-10">
+        <div class="mt-5">
 
             Welcome back {{ auth()->user()->name }}, good to see you!
 
