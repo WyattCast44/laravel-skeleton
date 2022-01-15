@@ -10,15 +10,14 @@
 
         <nav class="flex items-center space-x-4 border-b pb-2.5 border-gray-300">
             <a href="{{ route('login') }}">Login</a>
-            <a href="{{ route('login') }}">Register</a>
+            <a href="{{ route('register') }}">Register</a>
         </nav>
 
         <div class="mt-10">
-
-            Welcome to Wyatt's Laravel Skeleton, happy crafting ⚒
-
+            <x-blade.yield name="content" />
         </div>
         
     </div>
+
 
 </x-blade.extends>

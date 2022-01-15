@@ -1,0 +1,1 @@
+<x-blade.stack name="footer::scripts" />
