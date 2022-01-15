@@ -19,7 +19,7 @@
         
         <div>
             <x-inputs.label for="password">Password</x-inputs.label>
-            <x-inputs.text type="password" name="password" id="password" />
+            <x-inputs.password name="password" id="password" />
         </div>
 
     </form>

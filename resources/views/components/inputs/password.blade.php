@@ -1,0 +1,1 @@
+<x-inputs.text {{ $attributes->merge(['type' => 'password', 'class' => '']) }} />
