@@ -10,29 +10,43 @@ My personal Laravel application skeleton, TALL stack flavor.
 
 ## Installation
 
+Clone the repository and move into directory
+
 ```bash
 git clone https://github.com/WyattCast44/laravel-skeleton application && cd application
 ```
+
+Copy `.env.example` to `.env`
 
 ```bash
 cp .env.example .env
 ```
 
+Install composer dependencies
+
 ```bash
 composer install
 ```
+
+Generate application key
 
 ```bash
 php artisan key generate
 ```
 
+Migrate the database
+
 ```bash
 php artisan migrate
 ```
 
+Install FE dependencies
+
 ```bash
 yarn install
 ```
+
+Build fresh assets
 
 ```bash
 yarn dev
@@ -48,18 +62,18 @@ php artisan icons:cache
 
 ### Frontend
 
-- TailwindCSS (v3)
-- Tailwind Plugins
+- TailwindCSS (v3) with the following plugins
     - Forms
     - Line Clamp
     - Typography
     - Aspect Ratio
-- AlpineJS (v3)
-- AlpineJS plugins
+- [AlpineJS](https://alpinejs.dev) (v3) with the following plugins
     - Focus
     - Persist
     - Collapse
     - Intersect
+    - [Tooltips](https://github.com/ryangjchandler/alpine-tooltip)
+- [Tippy.js](https://tippyjs.bootcss.com/getting-started/)
 
 ### Backend
 

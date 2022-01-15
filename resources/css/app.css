@@ -9,3 +9,10 @@ a {
 a:hover {
     @apply underline;
 }
+
+.link {
+    @apply text-slate-800;
+}
+.link:hover {
+    @apply underline;
+}

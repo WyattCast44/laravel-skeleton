@@ -5,7 +5,7 @@
     <x-blade.include name="layouts.partials.styles" />
     <x-blade.include name="layouts.partials.head-scripts" />
 </head>
-<body class=" @stack('body::classes')">
+<body class="font-sans text-gray-900 selection:bg-slate-300 @stack('body::classes')">
     
     <x-blade.yield name="body" />
 

@@ -9,8 +9,19 @@
         </a>
 
         <nav class="flex items-center space-x-4 border-b pb-2.5 border-gray-300">
-            <a href="{{ route('login') }}">Login</a>
-            <a href="{{ route('login') }}">Register</a>
+            
+            <x-blade.guest>
+                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('login') }}">Register</a>
+            </x-blade.guest>
+
+            <x-blade.auth>
+                <form action="{{ route('logout') }}" method="post">
+                    <x-blade.csrf />
+                    <button class="link">Logout</button>
+                </form>
+            </x-blade.auth>
+
         </nav>
 
         <div class="mt-10">
