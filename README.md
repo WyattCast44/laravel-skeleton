@@ -2,6 +2,42 @@
 
 My personal Laravel application skeleton, TALL stack flavor.
 
+## TOC
+
+- Installation
+- Default FE Packages
+- Default BE Packages
+
+## Installation
+
+```bash
+git clone https://github.com/WyattCast44/laravel-skeleton application && cd application
+```
+
+```bash
+cp .env.example .env
+```
+
+```bash
+composer install
+```
+
+```bash
+php artisan key generate
+```
+
+```bash
+php artisan migrate
+```
+
+```bash
+yarn install
+```
+
+```bash
+yarn dev
+```
+
 ## Packages installed by default
 
 ### Frontend
