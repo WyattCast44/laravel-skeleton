@@ -101,4 +101,6 @@ php artisan icons:cache
 - Add controllers/api/v1 folders
 - Add telescope service provider to `app.php`
 - Add health endpoint for api/v1
+- Delete `server.php`
+- Install paratest by default
 - Add directory for svg icons
