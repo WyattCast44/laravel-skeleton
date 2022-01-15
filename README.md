@@ -60,6 +60,7 @@ yarn dev
 - Laravel Telescope
 - Laravel Debugbar
 - Laravel Sanctum
+- Blade UI Kit - Icons
 
 ## Summary of Changes
 
@@ -79,3 +80,5 @@ yarn dev
 - Delete broadcast service provider
 - Add controllers/api/v1 folders
 - Add telescope service provider to `app.php`
+- Add health endpoint for api/v1
+- Add directory for svg icons
