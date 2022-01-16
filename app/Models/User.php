@@ -9,7 +9,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable, TwoFactorAuthenticatable;
 
@@ -46,5 +46,19 @@ class User extends Authenticatable
     public function twoFactorAuthEnabled(): bool
     {
         return (bool) $this->two_factor_secret;
+    }
+
+    public function confirmTwoFactorAuth($code): bool
+    {
+        $codeIsValid = app(TwoFactorAuthenticationProvider::class)
+            ->verify(decrypt($this->two_factor_secret), $code);
+
+            if ($codeIsValid) {
+                return $this->update([
+                    'two_factor_confirmed' => true,
+                ]);
+            }
+
+        return false;
     }
 }

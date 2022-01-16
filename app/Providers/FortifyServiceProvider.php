@@ -2,15 +2,10 @@
 
 namespace App\Providers;
 
-use App\Actions\Fortify\CreateNewUser;
-use App\Actions\Fortify\ResetUserPassword;
-use App\Actions\Fortify\UpdateUserPassword;
-use App\Actions\Fortify\UpdateUserProfileInformation;
-use Illuminate\Cache\RateLimiting\Limit;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\RateLimiter;
-use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
+use Illuminate\Support\ServiceProvider;
+use App\Support\Fortify\RedirectIfTwoFactorConfirmed;
+use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -21,7 +16,7 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        
     }
 
     /**
@@ -30,7 +25,7 @@ class FortifyServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    {        
         Fortify::twoFactorChallengeView(function () {
             return view('auth.two-factor-challenge');
         });

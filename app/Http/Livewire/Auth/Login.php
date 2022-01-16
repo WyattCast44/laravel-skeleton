@@ -2,8 +2,11 @@
 
 namespace App\Http\Livewire\Auth;
 
+use App\Models\User;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Authenticated;
 
 class Login extends Component
 {
@@ -23,18 +26,37 @@ class Login extends Component
     {
         $this->validate();
 
-        $status = Auth::attempt([
-            'email' => $this->email,
-            'password' => $this->password,
-        ], $this->remember);
+        $user = User::where('email', $this->email)->first();
 
-        if(!$status) {
-            $this->addError('invalidCredentials', 'The given email/password combination does not match any accounts, please try again');
+        $success = false;
 
-            return;
+        if($user && Hash::check($this->password, $user->password)) {
+            $success = true;
         }
 
-        return redirect()->route('dashboard');
+        if(!$success) {
+            $this->addError('auth', 'The given email/password combo did not match any accounts, please try again.');
+
+            return;
+        } 
+
+        session()->put([
+            'login.id' => $user->getKey(),
+            'login.remember' => true,
+        ]);
+
+        if($user->twoFactorAuthEnabled()) {
+            return redirect()->route('two-factor.login');        
+        } else {
+            Auth::attempt([
+                'email' => $this->email,
+                'password' => $this->password
+            ], true);
+
+            event(new Authenticated('web', User::where('email', $this->email)->first()));
+            
+            return redirect()->intended(route('dashboard'));
+        }
     }
 
     public function render()
