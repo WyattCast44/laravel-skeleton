@@ -4,6 +4,8 @@
     <style>input[type='checkbox']{display: inline-block;}</style>
 </x-blade.push>
 
+<x-blade.section name="meta::title" content="Login" />
+
 <div>
 
     <h2 class="mb-5 text-2xl font-semibold">Login</h2>

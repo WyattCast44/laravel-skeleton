@@ -1,3 +1,5 @@
+<x-blade.section name="meta::title" content="Dashboard" />
+
 <x-blade.extends name="layouts.app" section="content">
     
     <x-blade.section name="page::title" content="Dashboard" />

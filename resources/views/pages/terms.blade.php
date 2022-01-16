@@ -1,3 +1,5 @@
+<x-blade.section name="meta::title" content="Terms of use" />
+
 <x-blade.extends name="layouts.marketing" section="content">
     
     <div class="prose prose-slate prose-hr:my-4">

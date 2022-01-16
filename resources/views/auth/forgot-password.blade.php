@@ -3,6 +3,8 @@
     <style>input{display: block;}</style>
 </x-blade.push>
 
+<x-blade.section name="meta::title" content="Forgot Password" />
+
 <div>
 
     <h2 class="mb-5 text-2xl font-semibold">Send Password Reset Email</h2>
