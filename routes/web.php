@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+// General
 Route::view('/', 'welcome')->name('welcome');
 Route::view('/terms', 'pages.terms')->name('terms');
 
