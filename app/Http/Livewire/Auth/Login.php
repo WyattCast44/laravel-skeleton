@@ -45,7 +45,7 @@ class Login extends Component
             'login.remember' => true,
         ]);
 
-        if($user->twoFactorAuthEnabled()) {
+        if($user->twoFactorAuthEnabled() and $user->twoFactorAuthConfirmed()) {
             return redirect()->route('two-factor.login');        
         } else {
             Auth::attempt([

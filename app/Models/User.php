@@ -41,6 +41,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'two_factor_confirmed' => 'boolean',
     ];
 
     public function twoFactorAuthEnabled(): bool
@@ -48,17 +49,9 @@ class User extends Authenticatable implements MustVerifyEmail
         return (bool) $this->two_factor_secret;
     }
 
-    public function confirmTwoFactorAuth($code): bool
+    public function twoFactorAuthConfirmed(): bool
     {
-        $codeIsValid = app(TwoFactorAuthenticationProvider::class)
-            ->verify(decrypt($this->two_factor_secret), $code);
-
-            if ($codeIsValid) {
-                return $this->update([
-                    'two_factor_confirmed' => true,
-                ]);
-            }
-
-        return false;
+        return true;
+        // return (bool) $this->two_factor_confirmed;
     }
 }
