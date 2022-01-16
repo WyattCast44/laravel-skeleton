@@ -22,6 +22,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'two_factor_confirmed',
     ];
 
     /**
@@ -52,6 +53,5 @@ class User extends Authenticatable implements MustVerifyEmail
     public function twoFactorAuthConfirmed(): bool
     {
         return (bool) $this->two_factor_confirmed;
-        return true;
     }
 }

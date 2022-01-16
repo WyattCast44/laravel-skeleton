@@ -35,6 +35,10 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Event::listen(TwoFactorAuthenticationDisabled::class, function($event) {
+            $event->user->update([
+                'two_factor_confirmed' => false,
+            ]);
+        });
     }
 }

@@ -8,6 +8,34 @@
     @endif
     
     @if (auth()->user()->twoFactorAuthEnabled())
+    
+        @if (session()->has('success'))
+            <p class="selection:bg-green-100 text-green-700">{{ session('success') }}<p>
+        @endif
+
+        @if (!auth()->user()->twoFactorAuthConfirmed())
+
+            <form action="{{ route('two-factor.confirm') }}" method="post" class="mb-5 space-y-4">
+                
+                <p>Before we fully enable 2FA, please confirm setup is complete by entering a one-time password from your authenticator application</p>
+
+                <x-blade.csrf />
+            
+                <div>
+                    <x-inputs.label class="inline-block" for="code">One time password</x-inputs.label>
+                    <x-input-groups.password name="code" class="block" id="code" required />
+                    <x-validation.error-inline name="code" />
+                </div>
+        
+                <div class="flex items-center space-x-2.5">
+                    <button type="submit" class="link">Confirm</button>
+                </div>
+                
+            </form>
+
+            <hr class="my-5 border-gray-300">
+            
+        @endif
 
         <div class="flex items-center w-32 h-32">
             {!! request()->user()->twoFactorQrCodeSvg() !!}
