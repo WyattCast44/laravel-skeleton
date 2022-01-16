@@ -19,8 +19,13 @@ class UserFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
+            'avatar' => null,
             'password' => Hash::make('password'),
+            'two_factor_secret' => null,
+            'two_factor_recovery_codes' => null,
+            'two_factor_confirmed' => null,
             'remember_token' => Str::random(10),
+            'api_disclaimer_accepted_at' => rand(0, 1) ? now() : null,
         ];
     }
 

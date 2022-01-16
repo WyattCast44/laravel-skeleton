@@ -14,9 +14,9 @@ class WellKnownPasswordResponseController extends Controller
 
     public function __invoke(): RedirectResponse
     {
-        if (auth()->check()) {
-            return redirect()->route('dashboard.account.security');
-        } 
+        // if (auth()->check()) {
+        //     return redirect()->route('dashboard.account');
+        // } 
     
         return redirect()->route('password.email');
     }

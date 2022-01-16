@@ -8,6 +8,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -21,8 +22,10 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $fillable = [
         'name',
         'email',
+        'avatar',
         'password',
         'two_factor_confirmed',
+        'api_disclaimer_accepted_at',
     ];
 
     /**
@@ -43,7 +46,35 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
         'two_factor_confirmed' => 'boolean',
+        'api_disclaimer_accepted_at' => 'datetime',
     ];
+
+    /**
+     * Accessors, mutators
+     */
+    public function getAvatarUrlAttribute(): string
+    {
+        if(!$this->avatar)  {
+            return "https://www.gravatar.com/avatar/" . md5($this->email);
+        }
+
+        return Storage::url($this->avatar);
+    }
+
+    /**
+     * Abilities, affordances, checks
+     */
+    public function apiEnabled(): bool
+    {
+        return (bool) $this->api_disclaimer_accepted_at;
+    }
+
+    public function enableApiAccess(): void
+    {
+        $this->update([
+            'api_disclaimer_accepted_at' => now(),
+        ]);
+    }
 
     public function twoFactorAuthEnabled(): bool
     {
