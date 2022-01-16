@@ -31,6 +31,10 @@
             <button type="submit" class="link">Register</button>
         </div>
 
+        <div>
+            <p>By registering, you agree to the <a href="{{ route('terms') }}">terms of use</a></p>
+        </div>
+
     </form>
 
 </div>

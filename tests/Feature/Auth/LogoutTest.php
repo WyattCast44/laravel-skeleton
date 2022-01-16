@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Auth;
 
 use Tests\TestCase;
 use Illuminate\Support\Facades\Auth;
@@ -13,8 +13,6 @@ class LogoutTest extends TestCase
     public function test_an_authenticated_user_can_logout()
     {
         $this->login();
-
-        $this->assertTrue(Auth::check());
 
         $this->get(route('dashboard'))
             ->assertOk();

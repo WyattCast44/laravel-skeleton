@@ -4,9 +4,14 @@ My personal Laravel application skeleton, TALL stack flavor.
 
 ## TOC
 
+- Features
 - Installation
 - Default FE Packages
 - Default BE Packages
+
+## Features
+
+- Fully tested user authentication system
 
 ## Installation
 
@@ -81,6 +86,7 @@ php artisan icons:cache
 - Laravel Debugbar
 - Laravel Sanctum
 - [Blade UI Kit - Icons](https://github.com/blade-ui-kit/blade-icons)
+- [Watson Active (route helper)](https://github.com/dwightwatson/active)
 
 ## Summary of Changes
 

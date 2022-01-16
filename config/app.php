@@ -165,11 +165,11 @@ return [
         /*
          * Package Service Providers...
          */
-        App\Providers\TelescopeServiceProvider::class,
-
+        Watson\Active\ActiveServiceProvider::class,
+        
         /*
-         * Application Service Providers...
-         */
+        * Application Service Providers...
+        */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
@@ -230,6 +230,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Package Aliases...
+         */
+        'Active' => Watson\Active\Facades\Active::class
 
     ],
 
