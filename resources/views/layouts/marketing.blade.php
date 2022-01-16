@@ -23,7 +23,7 @@
                 </form>
             </x-blade.auth>
 
-            <x-nav.select>
+            <x-nav.select class="py-1">
                 <x-nav.select.option label="Welcome" :to="route('welcome')" active="welcome" />
                 <x-nav.select.option label="Login" :to="route('login')" active="login" />
                 <x-nav.select.option label="Register" :to="route('register')" active="register" />

@@ -10,5 +10,8 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function() {
 
     // Dashboard index
     Route::view('/', 'app.index')->name('dashboard');
+    
+    // Account
+    Route::view('/account/two-factor-auth', 'app.account.2fa')->name('dashboard.account.2fa');
 
 });
