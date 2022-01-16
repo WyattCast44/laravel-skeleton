@@ -17,6 +17,7 @@
         <nav class="flex items-center space-x-4 border-b pb-2.5 border-gray-300">
 
             <x-nav.select class="py-1">
+                <x-nav.select.option label="Welcome" :to="route('welcome')" active="welcome" />
                 <x-nav.select.option label="Dashboard" :to="route('dashboard')" active="dashboard" />
                 <x-nav.select.option label="Confirm Password" :to="route('password.confirm')" active="password.confirm" />
                 <x-nav.select.option label="2 Factor Auth" :to="route('dashboard.account.2fa')" active="dashboard.account.2fa" />

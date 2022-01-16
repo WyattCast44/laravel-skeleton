@@ -17,7 +17,7 @@
             <p class="text-lg font-semibold">Recovery Codes</p>
             <ul class="text-gray-600 list-disc list-inside">
                 @foreach ((array) request()->user()->recoveryCodes() as $code)
-                    <li class="select-all">{{ $code }}</li>
+                    <li><span class="select-all">{{ $code }}</span></li>
                 @endforeach
             </ul>
         </div>
