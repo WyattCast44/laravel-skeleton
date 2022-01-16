@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\MessageBag;
+use App\Http\Controllers\Controller;
 use Laravel\Fortify\Contracts\TwoFactorAuthenticationProvider;
 
 class TwoFactorAuthController extends Controller
@@ -30,7 +30,7 @@ class TwoFactorAuthController extends Controller
                 'two_factor_confirmed' => true,
             ]);
 
-            session()->flash('success', 'Two factor authentication setup confirmed');
+            session()->flash('success', 'Two factor authentication setup confirmed!');
 
             return back(fallback: route('dashboard'));
         } else {

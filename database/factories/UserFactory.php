@@ -23,7 +23,7 @@ class UserFactory extends Factory
             'password' => Hash::make('password'),
             'two_factor_secret' => null,
             'two_factor_recovery_codes' => null,
-            'two_factor_confirmed' => null,
+            'two_factor_confirmed' => false,
             'remember_token' => Str::random(10),
             'api_disclaimer_accepted_at' => rand(0, 1) ? now() : null,
         ];

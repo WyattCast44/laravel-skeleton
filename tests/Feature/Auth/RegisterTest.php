@@ -4,7 +4,6 @@ namespace Tests\Feature\Auth;
 
 use Tests\TestCase;
 use Livewire\Livewire;
-use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;

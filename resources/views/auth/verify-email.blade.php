@@ -1,9 +1,10 @@
 <x-blade.section name="meta::title" content="Comfirm Email Address" />
+<x-blade.section name="page::title" content="Comfirm Email Address" />
 
 <div>
 
     @if (session('resent'))
-        <p class="selection:bg-green-100 text-green-700">A fresh verification link has been sent to your email address.</p>
+        <p class="text-green-700 selection:bg-green-100">A fresh verification link has been sent to your email address.</p>
     @endif
 
     <p>

@@ -8,7 +8,7 @@
 
 <x-blade.extends name="layouts.base" section="body">
     
-    <div class="mx-4 sm:mx-auto max-w-xl my-10">
+    <div class="max-w-xl mx-4 my-10 sm:mx-auto">
 
         <a href="{{ route('welcome') }}">
             <h1 class="pb-2.5 mb-2.5 text-2xl font-semibold border-b border-gray-300">

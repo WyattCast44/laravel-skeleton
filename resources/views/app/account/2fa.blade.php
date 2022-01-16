@@ -4,13 +4,13 @@
 <x-blade.extends name="layouts.app" section="content">
 
     @if (session('status') == 'two-factor-authentication-enabled')
-        <p class="selection:bg-green-100 text-green-700">Two factor authentication has been enabled!</p>
+        <p class="text-green-700 selection:bg-green-100">Two factor authentication has been enabled!</p>
     @endif
     
     @if (auth()->user()->twoFactorAuthEnabled())
     
         @if (session()->has('success'))
-            <p class="selection:bg-green-100 text-green-700">{{ session('success') }}<p>
+            <p class="text-green-700 selection:bg-green-100">{{ session('success') }}<p>
         @endif
 
         @if (!auth()->user()->twoFactorAuthConfirmed())

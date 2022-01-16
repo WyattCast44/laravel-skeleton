@@ -26,7 +26,7 @@ class VerifyEmail extends Component
     public function render()
     {
         return view('auth.verify-email')
-            ->extends('layouts.auth')
+            ->extends('layouts.app')
             ->section('content');
     }
 }
