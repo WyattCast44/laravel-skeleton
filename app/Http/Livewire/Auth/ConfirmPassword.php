@@ -22,7 +22,7 @@ class ConfirmPassword extends Component
         if ($status) {
             request()->session()->passwordConfirmed();
 
-            return redirect()->intended();
+            return redirect()->intended(route('dashboard'));
         }
 
         $this->addError('password', 'Please check your password and try again.');

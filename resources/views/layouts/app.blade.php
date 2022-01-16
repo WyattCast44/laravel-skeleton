@@ -18,6 +18,7 @@
 
             <x-nav.select class="py-1">
                 <x-nav.select.option label="Dashboard" :to="route('dashboard')" active="dashboard" />
+                <x-nav.select.option label="Confirm Password" :to="route('password.confirm')" active="password.confirm" />
                 <x-nav.select.option label="2 Factor Auth" :to="route('dashboard.account.2fa')" active="dashboard.account.2fa" />
             </x-nav.select>
 
