@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Auth;
 
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -34,6 +35,8 @@ class Register extends Component
             'email' => $this->email,
             'password' => Hash::make($this->password),
         ]);
+
+        event(new Registered($user));
 
         Auth::login($user);
 

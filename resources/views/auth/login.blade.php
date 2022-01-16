@@ -13,7 +13,7 @@
     <form class="space-y-4" wire:submit.prevent="attempt">
 
         <div>
-            <x-validation.error-inline name="invalidCredentials" />
+            <x-validation.error-inline name="auth" />
         </div>
     
         <div>
