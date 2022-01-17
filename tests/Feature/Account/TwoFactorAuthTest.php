@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Auth;
+namespace Tests\Feature\Account;
 
 use Tests\TestCase;
 use Illuminate\Auth\Middleware\RequirePassword;

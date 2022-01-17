@@ -16,6 +16,10 @@ class TwoFactorAuthController extends Controller
 
     public function confirm(Request $request)
     {
+        $this->validate($request, [
+            'code' => ['required', 'string', 'max:255'],
+        ]);
+        
         $user = $request->user();
         
         if(!$user->twoFactorAuthEnabled()) {

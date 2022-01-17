@@ -10,7 +10,7 @@
 
     <h2 class="mb-5 text-2xl font-semibold">Login</h2>
     
-    <form class="space-y-4" wire:submit.prevent="attempt">
+    <form class="space-y-4" method="post" wire:submit.prevent="attempt">
 
         <div>
             <x-validation.error-inline name="auth" />

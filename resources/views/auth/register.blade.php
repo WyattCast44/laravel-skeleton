@@ -9,7 +9,7 @@
 
     <h2 class="mb-5 text-2xl font-semibold">Register</h2>
 
-    <form class="space-y-4" wire:submit.prevent="attempt">
+    <form class="space-y-4" method="post" wire:submit.prevent="attempt">
 
         <div>
             <x-inputs.label for="name">Name</x-inputs.label>
