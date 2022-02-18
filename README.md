@@ -11,6 +11,7 @@ My personal Laravel application skeleton, TALL stack flavor.
 
 ## Features
 
+- Updated to support L9
 - Fully tested user authentication system
 - Two factor auth using [Laravel Fortify](https://laravel.com/docs/8.x/fortify)
 - Change password flow
