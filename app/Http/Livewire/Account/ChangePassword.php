@@ -15,7 +15,7 @@ class ChangePassword extends Component
     protected function rules()
     {
         return [
-            'current_password' => ['required', 'string', 'password'],
+            'current_password' => ['required', 'string', 'current_password'],
             'new_password' => ['required', 'string', 'max:255', Password::min(8)->numbers()->symbols()],
         ];
     }

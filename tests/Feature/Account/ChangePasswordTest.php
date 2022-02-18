@@ -69,7 +69,7 @@ class ChangePasswordTest extends TestCase
             ->set('new_password', 'password123!')
             ->call('attempt')
             ->assertHasErrors([
-                'current_password' => ['password']
+                'current_password' => ['current_password']
             ]);
     }
 
