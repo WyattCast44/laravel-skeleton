@@ -40,7 +40,7 @@ composer install
 Generate application key
 
 ```bash
-php artisan key generate
+php artisan key:generate
 ```
 
 Migrate the database
