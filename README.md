@@ -15,6 +15,7 @@ My personal Laravel application skeleton, TALL stack flavor.
 - Fully tested user authentication system
 - Two factor auth using [Laravel Fortify](https://laravel.com/docs/8.x/fortify)
 - Change password flow
+- Artisan command to create a user on the terminal
 
 ## Installation
 
