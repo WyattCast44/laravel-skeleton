@@ -3,10 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\User;
-use Illuminate\Support\Str;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use App\Console\Commands\Concerns\WithInputValidation;
 
 class CreateUserCommand extends Command
