@@ -118,3 +118,5 @@ php artisan icons:cache
 - Add flag to accept api disclaimer
 - Add user avatar, with default to gravataar
 - Add two factor confirmed flag to fix https://dev.to/nicolus/laravel-fortify-implement-2fa-in-a-way-that-won-t-let-users-lock-themselves-out-2ejk
+- Added artisan command to create a new user on the terminal 
+- Added well-known/password reset route
