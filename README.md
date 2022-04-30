@@ -77,18 +77,19 @@ php artisan icons:cache
     - Typography
     - Aspect Ratio
 - [AlpineJS](https://alpinejs.dev) (v3) with the following plugins
-    - Focus
-    - Persist
-    - Collapse
-    - Intersect
+    - [Focus](https://alpinejs.dev/plugins/focus)
+    - [Persist](https://alpinejs.dev/plugins/persist)
+    - [Collapse](https://alpinejs.dev/plugins/collapse)
+    - [Intersect](https://alpinejs.dev/plugins/intersect)
+    - [Mask](https://alpinejs.dev/plugins/mask)
     - [Tooltips](https://github.com/ryangjchandler/alpine-tooltip)
 - [Tippy.js](https://tippyjs.bootcss.com/getting-started/)
 
 ### Backend
 
-- Laravel Telescope
-- Laravel Debugbar
-- Laravel Sanctum
+- [Laravel Telescope](https://laravel.com/docs/9.x/telescope)
+- [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar)
+- [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum)
 - [Blade UI Kit - Icons](https://github.com/blade-ui-kit/blade-icons)
 - [Watson Active (route helper)](https://github.com/dwightwatson/active)
 

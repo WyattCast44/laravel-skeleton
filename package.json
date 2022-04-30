@@ -10,19 +10,20 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "@ryangjchandler/alpine-tooltip": "^0.4.0",
-        "laravel-mix": "^6.0.6",
-        "postcss": "^8.4.5",
         "@alpinejs/collapse": "^3.8.0",
         "@alpinejs/focus": "^3.8.0",
         "@alpinejs/intersect": "^3.8.0",
+        "@alpinejs/mask": "^3.10.2",
         "@alpinejs/persist": "^3.8.0",
+        "@ryangjchandler/alpine-tooltip": "^0.4.0",
         "@tailwindcss/aspect-ratio": "^0.4.0",
         "@tailwindcss/forms": "^0.4.0",
         "@tailwindcss/line-clamp": "^0.3.1",
         "@tailwindcss/typography": "^0.5.0",
         "alpinejs": "^3.8.0",
         "autoprefixer": "^10.4.2",
+        "laravel-mix": "^6.0.6",
+        "postcss": "^8.4.5",
         "tailwindcss": "^3.0.15",
         "tippy.js": "^6.3.7"
     },
