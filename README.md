@@ -1,6 +1,6 @@
 # Laravel Skeleton 💀
 
-My personal Laravel application skeleton, TALL stack flavor.
+A batteries included TALL stack Laravel skeleton 💀
 
 ## TOC
 
@@ -59,6 +59,12 @@ Build fresh assets
 
 ```bash
 yarn dev
+```
+
+## Testing
+
+```bash
+php artisan test --parallel
 ```
 
 ## Suggested Deployments Steps
