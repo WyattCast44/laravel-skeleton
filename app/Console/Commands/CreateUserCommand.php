@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Password;
 use App\Console\Commands\Concerns\WithInputValidation;
 
 class CreateUserCommand extends Command
@@ -45,6 +46,20 @@ class CreateUserCommand extends Command
         $user = User::create($user);
 
         $this->info('User created: ' . $user);
+
+        if($this->confirm('Should we send the user a password reset email?', false)) {
+
+            $status = Password::sendResetLink([
+                'email' => $user->email
+            ]);
+    
+            if ($status === Password::RESET_LINK_SENT) {
+                $this->info('Password reset email sent!');
+            } else {
+                $this->error('Error sending email, please check logs.');
+            }
+
+        }
 
         return 0;   
     }
