@@ -4,8 +4,6 @@ namespace App\Providers;
 
 use Laravel\Fortify\Fortify;
 use Illuminate\Support\ServiceProvider;
-use App\Support\Fortify\RedirectIfTwoFactorConfirmed;
-use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 
 class FortifyServiceProvider extends ServiceProvider
 {

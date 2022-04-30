@@ -25,7 +25,7 @@ class UserFactory extends Factory
             'two_factor_recovery_codes' => null,
             'two_factor_confirmed' => false,
             'remember_token' => Str::random(10),
-            'api_disclaimer_accepted_at' => rand(0, 1) ? now() : null,
+            'api_disclaimer_accepted_at' => null,
         ];
     }
 
@@ -39,6 +39,18 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) {
             return [
                 'email_verified_at' => null,
+            ];
+        });
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function apiEnabled()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'api_disclaimer_accepted_at' => now(),
             ];
         });
     }
